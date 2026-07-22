@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Detail - HEXA NEWS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="icon" type="image/jpeg" href="images/logo hexa.jpeg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="egns-preloader" id="preloader">
+        <div class="sequence">
+            <div class="seq-preloader">
+                <svg width="39" height="16" viewBox="0 0 39 16" xmlns="http://www.w3.org/2000/svg" class="seq-preload-indicator">
+                    <g fill="#ff4c60">
+                        <path class="seq-preload-circle seq-preload-circle-1" d="M3.999 12.012c2.209 0 3.999-1.791 3.999-3.999s-1.79-3.999-3.999-3.999-3.999 1.791-3.999 3.999 1.79 3.999 3.999 3.999z"></path>
+                        <path class="seq-preload-circle seq-preload-circle-2" d="M15.996 13.468c3.018 0 5.465-2.447 5.465-5.466 0-3.018-2.447-5.465-5.465-5.465-3.019 0-5.466 2.447-5.466 5.465 0 3.019 2.447 5.466 5.466 5.466z"></path>
+                        <path class="seq-preload-circle seq-preload-circle-3" d="M31.322 15.334c4.049 0 7.332-3.282 7.332-7.332 0-4.049-3.282-7.332-7.332-7.332s-7.332 3.283-7.332 7.332c0 4.05 3.283 7.332 7.332 7.332z"></path>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Topbar -->
+    <div class="topbar-1 d-lg-flex d-none">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3"><div class="date"><i class="bi bi-calendar3"></i> July 20, 2026 &nbsp; 28°C</div>
+                </div>
+                <div class="col-lg-6 text-center header-logo">
+                    <a href="index.html"><img src="images/logo hexa.jpeg" alt="HEXA NEWS" class="site-logo"></a>
+                </div>
+                <div class="col-lg-3">
+                    <ul class="social-1">
+                        <li><a href="#"><i class="bi bi-facebook"></i> 6.5K</a></li>
+                        <li><a href="#"><i class="bi bi-twitter-x"></i> 3.5K</a></li>
+                        <li><a href="#"><i class="bi bi-pinterest"></i> 2.1K</a></li>
+                        <li><a href="#"><i class="bi bi-instagram"></i> 1.9K</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header-area style-1" id="header">
+        <div class="container">
+            <div class="header-wrap d-flex align-items-center justify-content-between">
+                <div class="sidebar-button mobile-menu-btn d-flex" id="menuBtn">
+                    <span></span><span></span><span></span>
+                </div>
+                <nav class="main-nav" id="mainNav">
+                    <div class="mobile-logo-area d-lg-none d-flex">
+                        <button class="menu-close-btn" id="closeMenu"><i class="bi bi-x-lg"></i></button>
+                    </div>
+                    <ul class="menu-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="menu-item-has-children">
+                            <a href="#">International News</a>
+                            <ul class="sub-menu">
+                                <li><a href="asia.html">Asia</a></li>
+                                <li><a href="north-america.html">North America</a></li>
+                                <li><a href="antarctica.html">Antarctica</a></li>
+                                <li><a href="europe.html">Europe</a></li>
+                                <li><a href="australia.html">Australia</a></li>
+                                <li><a href="south-america.html">South America</a></li>
+                                <li><a href="africa.html">Africa</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="sports.html">Sports</a></li>
+                        <li><a href="health.html">Health</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-icons d-flex flex-row">
+                    <button class="search-btn" id="searchToggle"><i class="bi bi-search"></i></button>
+                    <div class="admin-area">
+                        <button><i class="bi bi-person"></i></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Sidebar -->
+    <div class="search-overlay-sidebar" id="searchOverlaySidebar"></div>
+    <div class="search-sidebar" id="searchSidebar">
+        <div class="search-sidebar-header">
+            <div class="search-input-wrap">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Search articles..." id="searchInput" autocomplete="off">
+            </div>
+            <div class="search-sidebar-close" id="closeSearchSidebar"><i class="bi bi-x-lg"></i></div>
+        </div>
+        <div class="search-sidebar-content">
+            <div class="search-suggestions" id="searchSuggestions">
+                <div class="search-suggestion-title">Trending Now</div>
+                <ul class="search-suggestion-list">
+                    <li><i class="bi bi-fire"></i> <span>AI Revolution 2026</span> <span class="trending-num">25.3K</span></li>
+                    <li><i class="bi bi-fire"></i> <span>Space Exploration News</span> <span class="trending-num">18.7K</span></li>
+                    <li><i class="bi bi-fire"></i> <span>Digital Marketing Tips</span> <span class="trending-num">12.1K</span></li>
+                    <li><i class="bi bi-fire"></i> <span>Health and Wellness</span> <span class="trending-num">9.8K</span></li>
+                    <li><i class="bi bi-fire"></i> <span>Travel Destinations</span> <span class="trending-num">8.5K</span></li>
+                </ul>
+                <div class="search-suggestion-title">Popular Topics</div>
+                <div class="search-tags-sidebar">
+                    <ul>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Lifestyle</a></li>
+                        <li><a href="#">Travel</a></li>
+                        <li><a href="#">Health</a></li>
+                        <li><a href="#">Fashion</a></li>
+                        <li><a href="#">Sports</a></li>
+                        <li><a href="#">Education</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="search-results-list" id="searchResults">
+                <div class="search-suggestion-title">Search Results</div>
+                <div class="search-result-item">
+                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=150&q=80" alt="result">
+                    <div class="result-content">
+                        <h6>Our Begin Now To Being What You Will Be</h6>
+                        <span>Lifestyle - 5 min read</span>
+                    </div>
+                </div>
+                <div class="search-result-item">
+                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=150&q=80" alt="result">
+                    <div class="result-content">
+                        <h6>Unleash Your Creativity: Explore Art</h6>
+                        <span>Art - 4 min read</span>
+                    </div>
+                </div>
+                <div class="search-result-item">
+                    <img src="https://images.unsplash.com/photo-1535139262971-c51845709a48?w=150&q=80" alt="result">
+                    <div class="result-content">
+                        <h6>Sports Excellence: Champions of Today</h6>
+                        <span>Sports - 6 min read</span>
+                    </div>
+                </div>
+                <div class="search-result-item">
+                    <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=150&q=80" alt="result">
+                    <div class="result-content">
+                        <h6>Technology Trends Shaping Our Future</h6>
+                        <span>Technology - 7 min read</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page" id="breadcrumbCategory">Article</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Post Hero Banner -->
+    <section class="post-hero-banner" id="heroBanner" style="background-image: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1400&q=80');">
+        <div class="post-hero-overlay"></div>
+        <div class="container">
+            <div class="post-hero-content">
+                <span class="post-hero-badge" id="heroBadge">Technology</span>
+                <h1 class="post-hero-title" id="heroTitle">Loading...</h1>
+                <div class="post-hero-meta">
+                    <span class="post-meta-author">
+                        <img src="https://i.pravatar.cc/40?img=5" alt="author" id="heroAuthorImg"> <span id="heroAuthor">Author</span>
+                    </span>
+                    <span class="post-meta-date"><i class="bi bi-calendar3"></i> <span id="heroDate">July 20, 2026</span></span>
+                    <span class="post-meta-views"><i class="bi bi-eye"></i> <span id="heroViews">1,000 views</span></span>
+                    <span class="post-meta-comments"><i class="bi bi-chat-dots"></i> <span id="heroComments">0 Comments</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Post Content Section -->
+    <section class="post-content-section section-padding">
+        <div class="container">
+                <div class="fade-up post-content-wrapper">
+
+                <!-- Category & Title Meta -->
+                <div class="post-header">
+                    <span class="badge badge-primary" id="postCategory">Technology</span>
+                    <h1 class="post-title" id="postTitle">Loading...</h1>
+                    <div class="post-author-row">
+                        <img src="https://i.pravatar.cc/40?img=5" alt="author" class="author-avatar" id="postAuthorImg">
+                        <div class="author-info">
+                            <span class="author-name" id="postAuthor">Author</span>
+                            <span class="post-date"><i class="bi bi-calendar3"></i> <span id="postDate">July 20, 2026</span> &nbsp;|&nbsp; <i class="bi bi-clock"></i> <span id="postReadTime">5 min read</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Image -->
+                <div class="post-featured-image">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&q=80" alt="featured" id="postImage">
+                </div>
+
+                <!-- Article Content -->
+                <div class="post-article-content" id="postContent">
+                    <p class="lead">Loading article content...</p>
+                </div>
+
+                <!-- Tags & Social Share -->
+                <div class="post-tags-share">
+                    <div class="post-tags" id="postTags"></div>
+                    <div class="post-share">
+                        <span class="share-label">Share:</span>
+                        <a href="#" class="share-btn facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="share-btn twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="share-btn linkedin"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="share-btn pinterest"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <!-- Post Navigation -->
+                <div class="post-navigation" id="postNav"></div>
+
+                <!-- Comments Section -->
+                <div class="post-comments">
+                    <h3 class="comments-heading" id="commentsHeading">Comments</h3>
+                    <div id="commentsList"></div>
+
+                    <!-- Leave a Comment -->
+                    <div class="comment-form-wrapper">
+                        <h3 class="comment-form-heading">Leave a Comment</h3>
+                        <form class="comment-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name *" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email *" required>
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" placeholder="Subject">
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="5" placeholder="Write your message *" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="eg-btn btn--primary">Submit Comment <i class="bi bi-send"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topic Section -->
+    <section class="category-section pt-100">
+        <div class="container">
+            <div class="section-title-1 mb-50 text-center">
+                <h2>Entire Topic <span class="subtitle">Category</span></h2>
+            </div>
+            <div class="swiper category-1-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="fade-up category-1">
+                            <a href="blog-classic.html" class="image"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="category"></a>
+                            <div class="content">
+                                <h4><a href="blog-classic.html">Business</a></h4>
+                                <ul>
+                                    <li>800 Article</li>
+                                    <li>3.9k View</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-1">
+                            <a href="blog-classic.html" class="image"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" alt="category"></a>
+                            <div class="content">
+                                <h4><a href="blog-classic.html">Life Style</a></h4>
+                                <ul>
+                                    <li>700 Article</li>
+                                    <li>1.6k View</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-1">
+                            <a href="blog-classic.html" class="image"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&q=80" alt="category"></a>
+                            <div class="content">
+                                <h4><a href="blog-classic.html">Fashion</a></h4>
+                                <ul>
+                                    <li>680 Article</li>
+                                    <li>2.8k View</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-1">
+                            <a href="blog-classic.html" class="image"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80" alt="category"></a>
+                            <div class="content">
+                                <h4><a href="blog-classic.html">Travel</a></h4>
+                                <ul>
+                                    <li>900 Article</li>
+                                    <li>1.3k View</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-1">
+                            <a href="blog-classic.html" class="image"><img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=400&q=80" alt="category"></a>
+                            <div class="content">
+                                <h4><a href="blog-classic.html">Pets Care</a></h4>
+                                <ul>
+                                    <li>800 Article</li>
+                                    <li>5.5k View</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="category1-prev swiper-prev-arrow"><i class="bi bi-arrow-left"></i></div>
+                <div class="category1-next swiper-next-arrow"><i class="bi bi-arrow-right"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="fade-up newsletter-content">
+                <div class="newsletter-left">
+                    <span class="newsletter-icon"><i class="bi bi-envelope-paper"></i></span>
+                    <div>
+                        <h3>Subscribe to Our Newsletter</h3>
+                        <p>Get the latest articles and news delivered straight to your inbox.</p>
+                    </div>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address">
+                    <button type="submit" class="eg-btn btn--primary">Subscribe <i class="bi bi-send"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer style-1">
+        <div class="container">
+            <div class="fade-up footer-widget-area pt-90 pb-90">
+                <div class="row gy-5">
+                    <div class="col-xl-3 col-lg-3 col-md-6">
+                        <div class="footer-info">
+                            <div class="footer-logo mb-20">
+                                <a href="index.html"><img src="images/logo hexa.jpeg" alt="HEXA NEWS" class="site-logo footer-logo"></a>
+                            </div>
+                            <h3 style="font-size:18px;color:#fff;margin-bottom:15px;">We Would Love to Hear From You.</h3>
+                            <div class="footer-form">
+                                <p style="font-size:14px;margin-bottom:10px;">Any question for us?</p>
+                                <form class="form-inner">
+                                    <input type="email" placeholder="Enter Your Email...">
+                                    <button type="submit">Send</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-6">
+                        <h4 class="footer-title">Top Article This Week</h4>
+                        <div class="blog-list-1">
+                            <a href="post-detail.html?id=1" class="image"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=120&q=80" alt="thumb"></a>
+                            <div class="content">
+                                <h6><a href="post-detail.html?id=1">Our Begin Now To Being What You Will Be.</a></h6>
+                                <ul>
+                                    <li><i class="bi bi-calendar3"></i> Jul 02, 2026</li>
+                                    <li><i class="bi bi-chat"></i> 520 Comment</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="blog-list-1">
+                            <a href="post-detail.html?id=2" class="image"><img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=120&q=80" alt="thumb"></a>
+                            <div class="content">
+                                <h6><a href="post-detail.html?id=2">Unleash Your Creativity: Explore Creative Works.</a></h6>
+                                <ul>
+                                    <li><i class="bi bi-calendar3"></i> Jul 11, 2026</li>
+                                    <li><i class="bi bi-chat"></i> 454 Comment</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-2 col-md-6">
+                        <h4 class="footer-title">Quick Link</h4>
+                        <ul class="footer-list">
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="#">International News</a></li>
+                            <li><a href="#">Post</a></li>
+                            <li><a href="#">Feature</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-6">
+                        <h4 class="footer-title">Social Media</h4>
+                        <ul class="social-2">
+                            <li><a href="#"><i class="bi bi-facebook"></i> Facebook</a></li>
+                            <li><a href="#"><i class="bi bi-twitter-x"></i> Twitter</a></li>
+                            <li><a href="#"><i class="bi bi-pinterest"></i> Pinterest</a></li>
+                            <li><a href="#"><i class="bi bi-instagram"></i> Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="help-center d-flex justify-content-md-between justify-content-center align-items-center">
+                <h5><a href="contact.html">Help Center</a></h5>
+                <ul class="help-list">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="contact.html">Help</a></li>
+                </ul>
+            </div>
+            <div class="copyright-area text-center pt-30 pb-30">
+                <p>&copy; 2026 HEXA NEWS is Proudly Powered by <a href="#" style="color:var(--primary-one);">Hexa Branding</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop"><i class="bi bi-arrow-up"></i></button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        new Swiper('.category-1-slider', {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: { delay: 3000, disableOnInteraction: false },
+            navigation: { prevEl: '.category1-prev', nextEl: '.category1-next' },
+            breakpoints: { 0: { slidesPerView: 1 }, 576: { slidesPerView: 2 }, 992: { slidesPerView: 4 } }
+        });
+    </script>
+    <script>
+    (function(){
+        var articles = {
+            1: {
+                title: "Our Begin Now To Being What You Will Be.",
+                category: "Lifestyle",
+                author: "Rison donec",
+                authorImg: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&q=80",
+                date: "July 20, 2026",
+                views: "1,500 views",
+                comments: "520",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=900&q=80",
+                heroImage: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1400&q=80",
+                tags: ["Lifestyle", "Inspiration", "Growth", "Motivation"],
+                content: '<p class="lead">Life is a journey of constant evolution and self-discovery. Every day presents an opportunity to grow, learn, and become the person you aspire to be. The key lies in embracing change and taking proactive steps toward your dreams.</p><p>In today\'s fast-paced world, it\'s easy to get caught up in the routine and forget about our aspirations. We often wait for the "perfect moment" to start working on our goals, but the truth is, the best time to begin is always now.</p><p>Research shows that people who set clear intentions and take consistent daily action are significantly more likely to achieve their long-term goals. The power of starting — even imperfectly — far outweighs the paralysis of waiting for everything to align perfectly.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"The secret of getting ahead is getting started. The secret of getting started is breaking your complex overwhelming tasks into small manageable tasks, and then starting on the first one."</p><cite>— Mark Twain</cite></blockquote><p>Consider the habits of highly successful people. They don\'t wait for motivation; they create systems that make progress automatic. Whether it\'s waking up early, reading for 30 minutes a day, or setting aside time for reflection, these small practices compound into remarkable transformations over time.</p><p>It\'s also important to surround yourself with people who inspire and challenge you. Your environment shapes your mindset, and choosing to be around growth-oriented individuals can accelerate your personal development in ways you never imagined.</p><h2>Practical Steps to Begin Today</h2><p>Start by identifying one area of your life where you want to see change. Write down three specific actions you can take this week. Then, commit to completing at least one of them every day. Small wins build momentum, and momentum builds lasting transformation.</p><p>Remember, the journey of a thousand miles begins with a single step. Don\'t let perfection be the enemy of progress. Start where you are, use what you have, and do what you can. Your future self will thank you for the courage to begin today.</p>'
+            },
+            2: {
+                title: "Unleash Your Creativity: Explore the World of Creative Works.",
+                category: "Art",
+                author: "Rison donec",
+                authorImg: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50&q=80",
+                date: "July 18, 2026",
+                views: "1,300 views",
+                comments: "340",
+                readTime: "6 min read",
+                image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=900&q=80",
+                heroImage: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1400&q=80",
+                tags: ["Art", "Creativity", "Design", "Innovation"],
+                content: '<p class="lead">Creativity is the beating heart of human civilization. From the earliest cave paintings to the latest digital masterpieces, creative expression has always been at the core of what makes us human and connects us across cultures and time.</p><p>The world of creative works is vast and endlessly inspiring. Whether you\'re drawn to visual arts, music, writing, photography, or any other form of expression, there\'s a universe of possibilities waiting to be explored.</p><p>Today\'s creative landscape is more accessible than ever before. Digital tools have democratized art creation, allowing anyone with a computer or smartphone to experiment with professional-grade techniques. Online platforms provide instant access to tutorials, communities, and audiences that previous generations of artists could only dream of.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Every child is an artist. The problem is how to remain an artist once we grow up."</p><cite>— Pablo Picasso</cite></blockquote><p>The most important thing about creativity is that it\'s not a talent reserved for the few — it\'s a skill that can be developed and nurtured by anyone willing to practice and explore. Like a muscle, creativity strengthens with use and weakens with neglect.</p><p>One of the biggest barriers to creative expression is the fear of imperfection. Many people never start creating because they\'re worried their work won\'t be "good enough." But the truth is, the process of creating is just as valuable as the final product. Every experiment, every failed attempt, every rough sketch teaches you something new.</p><h2>Finding Your Creative Voice</h2><p>Your unique perspective is your greatest asset as a creative person. Don\'t try to copy someone else\'s style — instead, draw inspiration from diverse sources and let your own voice emerge naturally. The most captivating creative works come from artists who have the courage to be authentically themselves.</p><p>Start today. Pick up a brush, open a notebook, launch a design app — whatever calls to you. The world needs your creative contribution.</p>'
+            },
+            3: {
+                title: "Hit the Green: Explore Our Golf Club's Amazing Offerings.",
+                category: "Sports",
+                author: "Rison donec",
+                authorImg: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&q=80",
+                date: "July 15, 2026",
+                views: "1,600 views",
+                comments: "210",
+                readTime: "4 min read",
+                image: "https://images.unsplash.com/photo-1535139262971-c51845709a48?w=900&q=80",
+                heroImage: "https://images.unsplash.com/photo-1535139262971-c51845709a48?w=1400&q=80",
+                tags: ["Sports", "Golf", "Fitness", "Outdoor"],
+                content: '<p class="lead">Golf has experienced a remarkable renaissance in recent years, attracting a new generation of players who appreciate the perfect blend of physical skill, mental strategy, and connection with nature that this timeless sport offers.</p><p>Our premier golf club offers world-class facilities designed to cater to players of all skill levels, from complete beginners taking their first swing to seasoned veterans looking to refine their technique.</p><p>The 18-hole championship course features rolling fairways, strategically placed bunkers, and pristine greens that challenge and delight in equal measure. Each hole has been carefully designed to offer a unique playing experience, ensuring that no two rounds are ever quite the same.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Golf is a game that is played on a five-inch course — the space between your ears."</p><cite>— Bobby Jones</cite></blockquote><p>Beyond the course, our club offers comprehensive practice facilities including a driving range with 40 bays, a short game area, and two putting greens. Our team of PGA-certified instructors uses the latest technology, including launch monitors and video analysis, to help you understand and improve every aspect of your game.</p><p>The clubhouse provides a welcoming retreat after a round, featuring a full-service restaurant, pro shop, and locker rooms. It\'s the perfect place to relax, share stories from the course, and connect with fellow golf enthusiasts.</p><h2>Membership Benefits</h2><p>Club members enjoy priority tee times, exclusive access to member-only events, and discounts on lessons and merchandise. Our social calendar includes monthly tournaments, themed dinner events, and family-friendly activities throughout the year.</p><p>Whether you\'re looking to improve your handicap, enjoy regular rounds on a beautiful course, or simply be part of a vibrant community, our golf club has everything you need to make the most of this wonderful sport.</p>'
+            },
+            4: {
+                title: "Discover the Art of Interior Decoration and Styling.",
+                category: "Interior",
+                author: "Rison donec",
+                authorImg: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&q=80",
+                date: "July 12, 2026",
+                views: "3,900 views",
+                comments: "430",
+                readTime: "7 min read",
+                image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=900&q=80",
+                heroImage: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1400&q=80",
+                tags: ["Interior", "Design", "Home", "Decor"],
+                content: '<p class="lead">Your home is a reflection of your personality, and interior decoration is the art of transforming living spaces into environments that inspire comfort, creativity, and joy. The right design choices can completely change how a room feels and functions.</p><p>Modern interior design has moved beyond rigid rules and strict color palettes. Today\'s most stunning spaces blend styles, textures, and eras to create rooms that feel both timeless and uniquely personal.</p><p>One of the fundamental principles of great interior design is understanding the interplay between light, space, and color. Natural light can make a small room feel expansive, while a thoughtful color palette can evoke specific moods — warm tones for coziness, cool tones for calm, and bold accents for energy.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Interior design is not about making something new — it\'s about revealing the potential that was always there in a space."</p><cite>— Nate Berkus</cite></blockquote><p>Texture is another powerful but often overlooked design element. Mixing materials — smooth marble with rough wood, soft velvet with industrial metal — creates visual depth and tactile interest that makes a room feel rich and inviting.</p><p>Furniture selection and placement play a crucial role in both the aesthetics and functionality of a space. The key is to create natural flow while defining distinct zones for different activities. A well-placed sofa can anchor a living room, while a strategically positioned desk can create an inspiring home office nook.</p><h2>Trends Worth Following</h2><p>Sustainable design is no longer a niche trend — it\'s becoming the standard. From reclaimed wood furniture to energy-efficient lighting, eco-conscious choices are both beautiful and responsible. Biophilic design, which incorporates natural elements like plants and organic shapes, continues to gain popularity for its proven benefits to well-being and productivity.</p><p>Start small. Rearrange a room, add a statement piece, or simply introduce a new color through accessories. You\'ll be amazed at how small changes can transform your entire living experience.</p>'
+            },
+            5: {
+                title: "Foodie's Paradise: Indulge in Exquisite Cuisine.",
+                category: "Food",
+                author: "Rison donec",
+                authorImg: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&q=80",
+                date: "July 10, 2026",
+                views: "2,800 views",
+                comments: "380",
+                readTime: "6 min read",
+                image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=900&q=80",
+                heroImage: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400&q=80",
+                tags: ["Food", "Cuisine", "Cooking", "Restaurant"],
+                content: '<p class="lead">Food is far more than sustenance — it\'s a universal language that connects cultures, tells stories, and creates memories that last a lifetime. From street food stalls to Michelin-starred restaurants, the world of gastronomy offers endless adventures for the curious palate.</p><p>The modern food scene is experiencing an exciting evolution. Chefs are pushing boundaries by blending traditional techniques with innovative ingredients, creating dishes that surprise and delight in equal measure. Molecular gastronomy, farm-to-table movements, and fusion cuisines are just a few of the exciting trends reshaping how we think about food.</p><p>One of the most rewarding culinary experiences is discovering the food culture of different regions. Each cuisine tells the story of its people, climate, and history. The complex spice blends of Indian cuisine, the delicate simplicity of Japanese presentation, the bold flavors of Mexican street food — every tradition offers unique lessons in flavor, technique, and creativity.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Cooking is like love. It should be entered into with abandon or not at all."</p><cite>— Harriet Van Horne</cite></blockquote><p>The rise of food media has transformed how we engage with cuisine. Cooking shows, food blogs, and social media platforms have made culinary knowledge more accessible than ever. Home cooks can now learn techniques from world-renowned chefs and recreate restaurant-quality dishes in their own kitchens.</p><p>Sustainability has also become a central theme in the food world. From reducing food waste to supporting local farmers, conscious eating is not just better for the planet — it often leads to more flavorful and nutritious meals as well.</p><h2>The Joy of Home Cooking</h2><p>While dining out is a wonderful experience, there\'s something uniquely satisfying about preparing a meal from scratch. Home cooking allows you to control ingredients, experiment with flavors, and share your creations with loved ones. Even simple dishes, made with care and quality ingredients, can be extraordinary.</p><p>Start your culinary journey today. Pick a cuisine you\'ve never tried, visit a local market for fresh ingredients, and let your kitchen become your laboratory of flavors.</p>'
+            },
+            6: {
+                title: "Explore the World: Unforgettable Travel Destinations.",
+                category: "Travel",
+                author: "Rison donec",
+                authorImg: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50&q=80",
+                date: "July 8, 2026",
+                views: "1,500 views",
+                comments: "290",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=80",
+                heroImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1400&q=80",
+                tags: ["Travel", "Adventure", "Destinations", "Explore"],
+                content: '<p class="lead">There\'s a whole world waiting to be explored, and travel is the key that unlocks its most treasured secrets. From pristine tropical beaches to ancient mountain temples, every destination offers a unique window into the beauty and diversity of our planet.</p><p>Travel broadens the mind in ways that no book or documentary can replicate. When you step into a new environment, your senses awaken — the unfamiliar sounds, the exotic aromas, the vibrant colors of a foreign marketplace. These experiences reshape how you see the world and your place in it.</p><p>Among the most sought-after destinations, the islands of Southeast Asia continue to captivate travelers with their crystal-clear waters, lush jungles, and warm hospitality. From the ancient temples of Bali to the limestone karsts of Thailand\'s Phi Phi Islands, this region offers an unmatched blend of natural beauty and cultural richness.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"The world is a book, and those who do not travel read only one page."</p><cite>— Saint Augustine</cite></blockquote><p>Europe remains an perennially enchanting destination, with its mosaic of cultures, languages, and architectural masterpieces. Walking through the cobblestone streets of Prague, gazing at the Northern Lights from Iceland, or savoring a sunset over Santorini — these are experiences that stay with you forever.</p><p>For those seeking adventure, destinations like Patagonia, New Zealand, and Kenya offer thrilling opportunities for hiking, wildlife safaris, and extreme sports. These places remind us of nature\'s raw power and beauty, and the importance of preserving it for future generations.</p><h2>Smart Travel Tips</h2><p>The best travel experiences often come from stepping off the beaten path. While popular landmarks are must-sees, some of the most memorable moments come from wandering through local neighborhoods, eating at family-run restaurants, and striking up conversations with locals.</p><p>Start planning your next adventure today. Whether it\'s a weekend getaway or a month-long expedition, the world is ready to welcome you with open arms.</p>'
+            },
+            7: {
+                title: "Elevate Your Game: The Ultimate Sports Experience.",
+                category: "Sports",
+                author: "Rison donec",
+                authorImg: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&q=80",
+                date: "July 5, 2026",
+                views: "1,300 views",
+                comments: "180",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1461896836934-bd45ba8fcf9b?w=900&q=80",
+                heroImage: "https://images.unsplash.com/photo-1461896836934-bd45ba8fcf9b?w=1400&q=80",
+                tags: ["Sports", "Fitness", "Training", "Athletics"],
+                content: '<p class="lead">Athletics and sports have always been at the forefront of human achievement, pushing the boundaries of what we thought possible and inspiring millions to pursue excellence in their own lives.</p><p>The modern sports landscape is evolving rapidly. Advances in training science, nutrition, and recovery techniques are helping athletes at every level reach new heights. Data analytics and wearable technology have transformed how teams prepare, strategize, and perform.</p><p>But beyond the professional arena, the greatest impact of sports is felt in everyday life. Regular physical activity improves cardiovascular health, boosts mental well-being, and builds the discipline and resilience that translate into success in all areas of life.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Champions aren\'t made in gyms. Champions are made from something they have deep inside them — a desire, a dream, a vision."</p><cite>— Muhammad Ali</cite></blockquote><p>Team sports offer particularly valuable life lessons. Learning to work cooperatively, handling both victory and defeat with grace, and committing to a common goal are skills that serve you well far beyond the playing field.</p><p>Individual sports, meanwhile, teach self-discipline, mental toughness, and the importance of consistent self-improvement. Whether it\'s running, swimming, tennis, or martial arts, the journey of mastering a solo sport is deeply rewarding.</p><h2>Getting Started</h2><p>You don\'t need to be a professional athlete to enjoy the benefits of sports. Find an activity you enjoy, set realistic goals, and commit to regular practice. Join a local club or find a training partner to stay motivated. The most important step is the first one — lace up your shoes and get moving.</p>'
+            },
+            8: {
+                title: "Brushstrokes of Creativity: Art in Motion.",
+                category: "Art",
+                author: "Rison donec",
+                authorImg: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&q=80",
+                date: "July 3, 2026",
+                views: "2,800 views",
+                comments: "310",
+                readTime: "6 min read",
+                image: "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=900&q=80",
+                heroImage: "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=1400&q=80",
+                tags: ["Art", "Painting", "Creativity", "Gallery"],
+                content: '<p class="lead">Art has always been humanity\'s most powerful form of expression — a bridge between the inner world of emotions and the outer world of shared experience. From the earliest handprints on cave walls to today\'s immersive digital installations, art continues to evolve and inspire.</p><p>Painting, perhaps the most iconic form of visual art, offers an unparalleled medium for self-expression. The simple act of applying color to a surface can convey complex emotions, tell stories, and provoke deep reflection.</p><p>Contemporary painting has embraced an incredible diversity of styles and techniques. Abstract expressionism continues to captivate audiences with its raw emotional power, while photorealism pushes the boundaries of technical mastery. Mixed media works combine traditional and digital elements to create entirely new visual experiences.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Painting is poetry that is seen rather than felt, and poetry is painting that is felt rather than seen."</p><cite>— Leonardo da Vinci</cite></blockquote><p>The global art market has seen remarkable growth, with contemporary works fetching record prices at auction. But beyond the commercial value, art\'s true worth lies in its ability to challenge perspectives, spark conversations, and bring communities together.</p><p>Art museums and galleries around the world are adapting to the digital age, offering virtual tours and online collections that make art accessible to anyone with an internet connection. This democratization of art is creating new audiences and inspiring a new generation of creators.</p><h2>Supporting Emerging Artists</h2><p>One of the most rewarding aspects of engaging with art is discovering emerging talent. Local art fairs, independent galleries, and online platforms provide wonderful opportunities to find and support artists at the beginning of their careers. Your support can make a meaningful difference in an artist\'s journey.</p>'
+            },
+            9: {
+                title: "Our Begin Now To Being What You Will Be.",
+                category: "Lifestyle",
+                author: "Vigola Morgan",
+                authorImg: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50&q=80",
+                date: "June 30, 2026",
+                views: "1,500 views",
+                comments: "220",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1505576399279-0d754c0ce1c8?w=900&q=80",
+                heroImage: "https://images.unsplash.com/photo-1505576399279-0d754c0ce1c8?w=1400&q=80",
+                tags: ["Lifestyle", "Wellness", "Growth", "Mindset"],
+                content: '<p class="lead">Personal growth isn\'t a destination — it\'s a lifelong journey of becoming more fully yourself. Every experience, challenge, and triumph shapes the person you\'re evolving into.</p><p>Understanding your values, strengths, and aspirations is the foundation of intentional living. When you know what truly matters to you, decision-making becomes clearer, and life feels more purposeful.</p><p>Mindfulness and self-reflection are powerful tools for personal development. Taking even five minutes a day to check in with yourself — to notice your thoughts, emotions, and physical sensations — can lead to profound insights and positive changes.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Knowing yourself is the beginning of all wisdom."</p><cite>— Aristotle</cite></blockquote><p>The most transformative growth often happens during difficult times. Challenges force us to dig deeper, discover hidden strengths, and develop resilience we didn\'t know we had. Embracing discomfort is the price of admission to a richer, more meaningful life.</p><p>Building supportive relationships is essential. Surround yourself with people who encourage your growth, challenge your assumptions, and celebrate your victories. The right community can accelerate your development in ways that going it alone never could.</p><h2>Creating Your Growth Plan</h2><p>Start by identifying three areas of your life where you\'d like to see improvement. For each area, set one specific, measurable goal and break it into weekly action steps. Review your progress regularly and adjust your approach as needed. Consistency, not perfection, is the key to lasting change.</p>'
+            },
+            10: {
+                title: "Discover the Art of Interior Decoration and Styling.",
+                category: "Travel",
+                author: "Rison donec",
+                authorImg: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&q=80",
+                date: "June 28, 2026",
+                views: "3,900 views",
+                comments: "350",
+                readTime: "6 min read",
+                image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=900&q=80",
+                heroImage: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1400&q=80",
+                tags: ["Travel", "Architecture", "Design", "Destinations"],
+                content: '<p class="lead">The world\'s most beautiful spaces tell stories through their design. From historic palaces to modern boutique hotels, interior architecture and styling create environments that move, inspire, and comfort us.</p><p>Travel offers a unique opportunity to experience diverse design philosophies. The minimalist elegance of Scandinavian interiors, the ornate richness of Moroccan riads, the clean sophistication of Japanese ryokans — each tradition offers valuable lessons in creating beautiful, functional spaces.</p><p>The best interior stylists draw inspiration from their travels, collecting ideas, textures, and color palettes from around the world. A single trip can provide a lifetime of design inspiration.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"A house is made of walls and beams; a home is built with love and dreams."</p><cite>— Ralph Waldo Emerson</cite></blockquote><p>Understanding the principles of scale, proportion, and balance can help you create spaces that feel harmonious and inviting. These fundamental concepts apply whether you\'re styling a cozy apartment or designing a grand public space.</p><p>Color theory plays a crucial role in interior design. Different hues evoke different emotions — blue promotes calm, yellow inspires optimism, green connects us with nature. Understanding these associations can help you create rooms that support the moods and activities you want to foster.</p><h2>Bringing Travel Inspiration Home</h2><p>One of the joys of travel is finding ways to incorporate global design elements into your own space. Whether it\'s a handwoven textile from Peru, a ceramic piece from Japan, or a color palette inspired by the Mediterranean, travel-inspired design adds depth and character to any room.</p>'
+            },
+            11: {
+                title: "Foodie's Paradise: Indulge in Exquisite Cuisine.",
+                category: "Food",
+                author: "Rison donec",
+                authorImg: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&q=80",
+                date: "June 25, 2026",
+                views: "1,300 views",
+                comments: "190",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=900&q=80",
+                heroImage: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=1400&q=80",
+                tags: ["Food", "Baking", "Recipe", "Culinary"],
+                content: '<p class="lead">There\'s a special kind of magic in the art of baking — the transformation of simple ingredients into something extraordinary through heat, time, and a touch of patience.</p><p>Baking is both science and art. The precise measurements and chemical reactions that make bread rise or cake layers form are balanced by the creative decisions that make each recipe uniquely yours.</p><p>The satisfaction of pulling a perfectly golden loaf from the oven, or decorating a cake that looks almost too beautiful to eat, is one of life\'s simple but profound pleasures.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Baking is both art and science. It requires precision, creativity, and a whole lot of love."</p><cite>— Unknown</cite></blockquote><p>From sourdough bread to French pastries, from rustic cobblers to elegant layered cakes, the world of baking offers endless opportunities for exploration and mastery. Each type of baking has its own traditions, techniques, and secrets waiting to be discovered.</p><p>The communal aspect of baking is equally important. Sharing homemade bread with neighbors, bringing cookies to a gathering, or teaching a child to bake — these acts of generosity create connections and memories that nourish the soul as much as the food nourishes the body.</p><h2>Essential Baking Tips</h2><p>Start with quality ingredients — they make a noticeable difference. Invest in a reliable kitchen scale for accurate measurements. And remember: practice makes perfect. Your first loaf may not be flawless, but each attempt teaches you something new about this wonderful craft.</p>'
+            },
+            12: {
+                title: "Our Begin Now To Being What You Will Be.",
+                category: "Travel",
+                author: "Miles Jaxon",
+                authorImg: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&q=80",
+                date: "July 20, 2026",
+                views: "2,100 views",
+                comments: "175",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=900&q=80",
+                heroImage: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1400&q=80",
+                tags: ["Travel", "Adventure", "Journey", "Explore"],
+                content: '<p class="lead">Every great journey begins with a single step. Whether you\'re dreaming of distant shores or planning your next weekend getaway, travel has the power to transform your perspective and enrich your life in ways you never imagined.</p><p>The beauty of travel lies not just in the destinations we reach, but in the experiences we collect along the way. A conversation with a local shopkeeper, the taste of an unfamiliar dish, the breathtaking view from a mountain summit — these moments become the stories we carry with us forever.</p><p>Modern travel is more accessible than ever. Budget airlines, online booking platforms, and sharing economy services have made it possible for almost anyone to explore the world, regardless of their budget.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Not all those who wander are lost."</p><cite>— J.R.R. Tolkien</cite></blockquote><p>Solo travel, in particular, offers unique opportunities for self-discovery and personal growth. When you navigate unfamiliar places on your own, you develop confidence, adaptability, and problem-solving skills that serve you well in all areas of life.</p><p>Group travel, on the other hand, creates shared memories and strengthens bonds. Whether you\'re traveling with family, friends, or a tour group, the shared experiences create lasting connections.</p><h2>Planning Your Next Adventure</h2><p>Start by asking yourself what kind of experience you\'re seeking. Are you looking for relaxation on a beach, cultural immersion in a historic city, or adrenaline-pumping adventure in the wilderness? Once you know your travel style, the perfect destination will reveal itself.</p>'
+            },
+            13: {
+                title: "Primis in faucibus ori cubilia luctus et ultrices.",
+                category: "Travel",
+                author: "Miles Jaxon",
+                authorImg: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&q=80",
+                date: "July 18, 2026",
+                views: "1,800 views",
+                comments: "145",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=900&q=80",
+                heroImage: "https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=1400&q=80",
+                tags: ["Travel", "Culture", "Heritage", "Explore"],
+                content: '<p class="lead">The world is filled with destinations that seem almost too beautiful to be real. From hidden temples nestled in tropical forests to sun-drenched coastlines that stretch to the horizon, nature and human creativity have collaborated to create some truly awe-inspiring places.</p><p>Cultural heritage sites offer a window into the lives and achievements of past civilizations. Walking through ancient ruins, exploring historic quarters, and visiting world-class museums connect us with the broader human story in a deeply meaningful way.</p><p>Many of the world\'s most remarkable destinations are found in unexpected places. A small coastal village might harbor centuries of maritime tradition, while a remote mountain community might preserve ancient crafts and customs.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Travel is fatal to prejudice, bigotry, and narrow-mindedness."</p><cite>— Mark Twain</cite></blockquote><p>Responsible travel means respecting the cultures and environments we visit. By supporting local businesses, following sustainable practices, and approaching new experiences with openness and respect, we can ensure that the places we love remain vibrant for future generations.</p><p>The memories we create while traveling shape who we are. They broaden our horizons, challenge our assumptions, and remind us of the incredible diversity and beauty of our world.</p><h2>Off-the-Beaten-Path Destinations</h2><p>Consider visiting lesser-known destinations for your next trip. Not only will you avoid the crowds, but you\'ll often find more authentic experiences and more affordable prices. Some of the best travel memories come from the places you didn\'t plan to visit.</p>'
+            },
+            14: {
+                title: "Vestibulum ligula sodalesoi Morbi iaculis laoreet.",
+                category: "Travel",
+                author: "Miles Jaxon",
+                authorImg: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&q=80",
+                date: "July 15, 2026",
+                views: "1,400 views",
+                comments: "120",
+                readTime: "4 min read",
+                image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=900&q=80",
+                heroImage: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1400&q=80",
+                tags: ["Travel", "Nature", "Photography", "Scenic"],
+                content: '<p class="lead">Nature has an extraordinary ability to heal, inspire, and reconnect us with what matters most. In our increasingly digital world, stepping into the great outdoors has never been more important — or more rewarding.</p><p>From the towering peaks of the Himalayas to the serene beauty of a local park, natural spaces offer solace and wonder in equal measure. Studies consistently show that spending time in nature reduces stress, improves mood, and enhances creativity.</p><p>Photography has become the universal language of travel and nature appreciation. With today\'s smartphones, everyone can capture and share the beauty they encounter, creating a global tapestry of natural wonder.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"In every walk with nature, one receives far more than he seeks."</p><cite>— John Muir</cite></blockquote><p>The practice of forest bathing — spending quiet, mindful time among trees — has gained recognition for its measurable health benefits. Lower blood pressure, improved immune function, and reduced anxiety are just a few of the documented effects of this simple but powerful practice.</p><p>Whether you prefer challenging mountain hikes, peaceful lakeside walks, or exploration of urban green spaces, making nature a regular part of your routine will enhance your quality of life in profound ways.</p><h2>Getting Into Nature</h2><p>You don\'t need to live near a national park to enjoy the benefits of nature. Start by visiting a local botanical garden, taking a walk along a river, or simply sitting under a tree in your neighborhood. The key is consistency — regular nature exposure, even in small doses, makes a big difference.</p>'
+            },
+            15: {
+                title: "Etiam et quam atentl tortor placerat facilisis.",
+                category: "Lifestyle",
+                author: "Vigola Morgan",
+                authorImg: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50&q=80",
+                date: "July 12, 2026",
+                views: "2,200 views",
+                comments: "280",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=900&q=80",
+                heroImage: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=1400&q=80",
+                tags: ["Lifestyle", "Wellness", "Balance", "Self-care"],
+                content: '<p class="lead">In the hustle of modern life, finding balance isn\'t just a luxury — it\'s a necessity. The art of living well means learning to nurture your body, mind, and relationships in harmony.</p><p>Wellness is more than just exercise and diet. It\'s about creating a lifestyle that supports your overall well-being — from the quality of your sleep to the strength of your social connections.</p><p>Setting boundaries is one of the most important skills for maintaining balance. Learning to say no to commitments that don\'t align with your priorities frees up time and energy for the things that truly matter.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Almost everything will work again if you unplug it for a few minutes — including you."</p><cite>— Anne Lamott</cite></blockquote><p>Regular self-care practices — whether it\'s a morning meditation, an evening walk, or simply taking time to read — are not selfish indulgences but essential maintenance for a healthy, productive life.</p><p>The people you surround yourself with have a profound impact on your well-being. Cultivating relationships with supportive, positive individuals creates a foundation of emotional resilience that helps you navigate life\'s inevitable challenges.</p><h2>Building Sustainable Habits</h2><p>Start small. Choose one new habit and commit to it for 30 days. Once it becomes automatic, add another. Over time, these small changes compound into a dramatically improved quality of life. Remember, sustainable change comes from consistent small steps, not dramatic overhauls.</p>'
+            },
+            16: {
+                title: "Nullam ac odio tellus. Praesent vehicula metus.",
+                category: "Lifestyle",
+                author: "Vigola Morgan",
+                authorImg: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50&q=80",
+                date: "July 10, 2026",
+                views: "1,600 views",
+                comments: "200",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=900&q=80",
+                heroImage: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1400&q=80",
+                tags: ["Lifestyle", "Nature", "Peace", "Mindfulness"],
+                content: '<p class="lead">Mindfulness is the practice of being fully present in the moment — aware of where we are and what we\'re doing, without being overly reactive or overwhelmed by what\'s happening around us.</p><p>In a world that constantly demands our attention, the ability to focus on the present moment is both rare and valuable. Mindfulness practices help us step out of autopilot and engage with life more fully.</p><p>Research from leading universities has documented the wide-ranging benefits of regular mindfulness practice, including reduced anxiety, improved concentration, better emotional regulation, and enhanced relationships.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"The present moment is filled with joy and happiness. If you are attentive, you will see it."</p><cite>— Thich Nhat Hanh</cite></blockquote><p>You don\'t need to sit in meditation for hours to experience the benefits of mindfulness. Even a few minutes of conscious breathing or a brief body scan can shift your state and bring a sense of calm and clarity.</p><p>Mindful eating, mindful walking, mindful listening — there are countless ways to incorporate mindfulness into your daily routine. The key is to approach each practice with curiosity and without judgment.</p><h2>Starting Your Mindfulness Journey</h2><p>Begin with just five minutes a day. Sit comfortably, close your eyes, and focus on your breath. When your mind wanders — and it will — gently bring your attention back to your breathing. With practice, you\'ll find it easier to stay present and centered throughout the day.</p>'
+            },
+            17: {
+                title: "Sed lectus duitotan tristiquei eleifend blandit.",
+                category: "Fashion",
+                author: "Jace Emmett",
+                authorImg: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=50&q=80",
+                date: "July 8, 2026",
+                views: "1,900 views",
+                comments: "160",
+                readTime: "6 min read",
+                image: "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=900&q=80",
+                heroImage: "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=1400&q=80",
+                tags: ["Fashion", "Style", "Trends", "Wardrobe"],
+                content: '<p class="lead">Fashion is more than clothing — it\'s a powerful form of self-expression that communicates who we are and how we see the world. The right outfit can boost confidence, spark creativity, and set the tone for an extraordinary day.</p><p>True style isn\'t about following every trend or owning a designer wardrobe. It\'s about understanding what works for you and developing a personal aesthetic that feels authentic and comfortable.</p><p>The fashion industry is undergoing a significant transformation, with growing emphasis on sustainability, inclusivity, and ethical production. Consumers are increasingly aware of the impact their clothing choices have on people and the planet.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Fashion is the armor to survive the reality of everyday life."</p><cite>— Bill Cunningham</cite></blockquote><p>Building a versatile wardrobe doesn\'t require a massive budget. Investing in quality basics — well-fitting jeans, a classic blazer, comfortable shoes, and timeless accessories — creates a foundation that can be mixed and matched for any occasion.</p><p>Color theory plays an important role in personal style. Understanding which colors complement your skin tone, hair, and eyes can help you make more confident choices and create looks that truly flatter.</p><h2>Developing Your Personal Style</h2><p>Start by studying looks that appeal to you. Create a mood board of outfits, colors, and textures you love. Then experiment — try new combinations, step outside your comfort zone, and notice what makes you feel most confident. Your style will evolve naturally as you learn more about what works for you.</p>'
+            },
+            18: {
+                title: "Maximus urna nec estrango ligula sodales.",
+                category: "Fashion",
+                author: "Jace Emmett",
+                authorImg: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=50&q=80",
+                date: "July 5, 2026",
+                views: "1,200 views",
+                comments: "130",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1542281286-9e0a16bb7366?w=900&q=80",
+                heroImage: "https://images.unsplash.com/photo-1542281286-9e0a16bb7366?w=1400&q=80",
+                tags: ["Fashion", "Accessories", "Trends", "Style"],
+                content: '<p class="lead">Accessories are the secret weapon of great style. The right accessory can transform a simple outfit into a statement, adding personality, color, and visual interest to any look.</p><p>From watches and jewelry to scarves and bags, accessories offer endless opportunities for creative expression. They\'re also a practical way to refresh your wardrobe without a major investment.</p><p>The most stylish people understand that accessories should complement, not overwhelm. A well-chosen piece draws attention without competing with the rest of your outfit.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"You can have anything you want in life if you dress for it."</p><cite>— Edith Head</cite></blockquote><p>Quality accessories age beautifully and often become cherished pieces with personal meaning. A classic watch, a handcrafted bracelet, or a vintage bag can become signature elements of your personal style.</p><p>When building your accessory collection, focus on versatility. Pieces that work across multiple outfits and occasions provide the best value and the most styling options.</p><h2>Accessory Essentials</h2><p>Every wardrobe benefits from a few key accessories: a quality watch, a versatile bag, a pair of classic sunglasses, and a few pieces of understated jewelry. These staples can be mixed with trendier pieces to create looks that feel both current and timeless.</p>'
+            },
+            19: {
+                title: "Gravida orci sed laoreet tellus.",
+                category: "Editor Choice",
+                author: "David Miller",
+                authorImg: "https://i.pravatar.cc/40?img=5",
+                date: "Nov 10, 2026",
+                views: "4,500 views",
+                comments: "520",
+                readTime: "7 min read",
+                image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80",
+                heroImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1400&q=80",
+                tags: ["Business", "Innovation", "Technology", "Future"],
+                content: '<p class="lead">The intersection of technology and business continues to reshape industries at an unprecedented pace. Organizations that embrace innovation and adapt to changing landscapes are the ones that thrive in today\'s competitive environment.</p><p>Artificial intelligence, blockchain, and the Internet of Things are no longer futuristic concepts — they\'re practical tools that forward-thinking businesses are using to streamline operations, enhance customer experiences, and create entirely new revenue streams.</p><p>The most successful companies are those that view technology not as a threat but as an opportunity. They invest in digital transformation, upskill their workforce, and create cultures that encourage experimentation and continuous improvement.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"The best way to predict the future is to create it."</p><cite>— Peter Drucker</cite></blockquote><p>Leadership in the digital age requires a different set of skills than in previous eras. Today\'s leaders must be comfortable with ambiguity, adept at managing distributed teams, and skilled at translating complex technological concepts into clear business strategies.</p><p>The companies that will dominate the next decade are being built today. By investing in innovation, nurturing talent, and staying close to their customers, they\'re laying the groundwork for sustained success.</p><h2>The Innovation Imperative</h2><p>For business leaders, the message is clear: innovate or risk irrelevance. The good news is that the tools for innovation have never been more accessible. Cloud computing, open-source software, and AI-powered tools democratize access to capabilities that were once reserved for the largest corporations.</p>'
+            },
+            20: {
+                title: "Laoreet tellus Morbi uto dolor mattis.",
+                category: "Editor Choice",
+                author: "Sarah Wilson",
+                authorImg: "https://i.pravatar.cc/40?img=16",
+                date: "Nov 01, 2026",
+                views: "3,200 views",
+                comments: "854",
+                readTime: "6 min read",
+                image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&q=80",
+                heroImage: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1400&q=80",
+                tags: ["Education", "Learning", "Growth", "Skills"],
+                content: '<p class="lead">In an era of rapid technological change, continuous learning has become not just advantageous but essential for professional survival and success. The skills that got you where you are today may not be sufficient to get you where you need to be tomorrow.</p><p>The concept of lifelong learning is transforming how we think about education. Traditional models of front-loading education in youth are giving way to ongoing skill development throughout one\'s career.</p><p>Online learning platforms have made world-class education accessible to millions who previously had no access. From coding bootcamps to MBA programs, the opportunities for skill development are more diverse and affordable than ever before.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Live as if you were to die tomorrow. Learn as if you were to live forever."</p><cite>— Mahatma Gandhi</cite></blockquote><p>The most in-demand skills of the future — critical thinking, creativity, emotional intelligence, and complex problem-solving — are uniquely human capabilities that complement rather than compete with technology.</p><p>Organizations that invest in employee development see higher retention rates, greater innovation, and stronger performance. Learning isn\'t just good for individuals — it\'s good for business.</p><h2>Building a Learning Habit</h2><p>Start by dedicating just 30 minutes a day to learning something new. Read articles in your field, take an online course, or listen to educational podcasts. The compound effect of consistent daily learning is remarkable.</p>'
+            },
+            21: {
+                title: "Nam ullamcorper risuso non commodo.",
+                category: "Editor Choice",
+                author: "Mike Chen",
+                authorImg: "https://i.pravatar.cc/40?img=33",
+                date: "Nov 11, 2026",
+                views: "2,800 views",
+                comments: "87",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&q=80",
+                heroImage: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1400&q=80",
+                tags: ["Business", "Leadership", "Management", "Strategy"],
+                content: '<p class="lead">Great leadership isn\'t about authority or title — it\'s about influence, vision, and the ability to bring out the best in others. The most effective leaders create environments where people feel empowered to do their best work.</p><p>In today\'s complex business landscape, leadership requires adaptability. The command-and-control style of previous generations is giving way to collaborative, empathetic approaches that recognize the value of diverse perspectives.</p><p>Emotional intelligence — the ability to understand and manage your own emotions while recognizing and influencing the emotions of others — is increasingly recognized as a critical leadership competency.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"A leader is one who knows the way, goes the way, and shows the way."</p><cite>— John C. Maxwell</cite></blockquote><p>Effective communication lies at the heart of great leadership. The ability to articulate a clear vision, provide constructive feedback, and listen actively to team members creates a culture of trust and accountability.</p><p>Leading through uncertainty is perhaps the ultimate test of leadership. In times of crisis, people look to their leaders for calm, clarity, and confidence — qualities that can be developed through practice and self-awareness.</p><h2>Developing Your Leadership Skills</h2><p>Leadership is a journey, not a destination. Seek out mentors, read widely, and be open to feedback. Every experience — both successes and failures — offers valuable lessons that make you a more effective leader.</p>'
+            },
+            22: {
+                title: "Proin augue dolor ullamcorpert id neque non eleifend.",
+                category: "Travel",
+                author: "Miles Jaxon",
+                authorImg: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&q=80",
+                date: "July 15, 2026",
+                views: "2,400 views",
+                comments: "195",
+                readTime: "6 min read",
+                image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=500&q=80",
+                heroImage: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1400&q=80",
+                tags: ["Travel", "Beach", "Tropical", "Vacation"],
+                content: '<p class="lead">There\'s something truly magical about standing at the edge of the ocean, feeling the warm sand between your toes and watching the waves dance across the horizon. Beach destinations offer a unique combination of relaxation, adventure, and natural beauty.</p><p>Tropical paradises around the world beckon travelers with their crystal-clear waters, vibrant coral reefs, and lush landscapes. From the Maldives to the Caribbean, from Southeast Asia to the Pacific Islands, these destinations offer experiences that feed the soul.</p><p>Beach vacations aren\'t just about lounging in the sun. Water sports like surfing, snorkeling, and kayaking provide exciting ways to explore marine environments and stay active while on holiday.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"The sea, once it casts its spell, holds one in its net of wonder forever."</p><cite>— Jacques Cousteau</cite></blockquote><p>Coastal communities often have rich cultural traditions shaped by their relationship with the sea. Exploring local fishing villages, sampling fresh seafood, and learning about maritime heritage adds depth to any beach vacation.</p><p>Eco-conscious travel is especially important in fragile coastal ecosystems. Choosing environmentally responsible accommodations, respecting marine life, and minimizing plastic use helps protect these beautiful destinations for future generations.</p><h2>Planning Your Beach Getaway</h2><p>Consider what type of beach experience you\'re seeking. Do you want secluded stretches of sand or lively beach scenes? Water sports adventures or peaceful yoga retreats? Research destinations that match your vision and book during shoulder seasons for the best combination of weather and value.</p>'
+            },
+            23: {
+                title: "Imperdiet ident turpis Nunc ont scelerisque ante.",
+                category: "Lifestyle",
+                author: "Andres Emilion",
+                authorImg: "https://i.pravatar.cc/40?img=11",
+                date: "July 12, 2026",
+                views: "1,700 views",
+                comments: "155",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=500&q=80",
+                heroImage: "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=1400&q=80",
+                tags: ["Lifestyle", "Health", "Wellness", "Fitness"],
+                content: '<p class="lead">Health is the foundation upon which everything else in life is built. Without physical and mental well-being, achieving our goals and enjoying our relationships becomes infinitely more challenging.</p><p>The modern understanding of health extends far beyond the absence of disease. True wellness encompasses physical vitality, mental clarity, emotional balance, and social connection.</p><p>Small, consistent habits have a more profound impact on health than dramatic but unsustainable changes. A daily walk, adequate sleep, regular hydration, and stress management practices create a foundation of well-being.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"The greatest wealth is health."</p><cite>— Virgil</cite></blockquote><p>Mental health deserves the same attention and care as physical health. Practices like meditation, journaling, and therapy provide powerful tools for maintaining emotional equilibrium and building resilience.</p><p>Nutrition plays a central role in overall health. Rather than following restrictive diets, focus on eating whole, nutrient-dense foods that fuel your body and mind. The Mediterranean diet, with its emphasis on vegetables, fruits, whole grains, and healthy fats, consistently ranks among the healthiest dietary patterns.</p><h2>Simple Steps to Better Health</h2><p>Start with the basics: aim for seven to eight hours of sleep, drink plenty of water, move your body for at least 30 minutes a day, and eat more vegetables. These simple habits form the foundation of a healthy lifestyle and require minimal willpower to maintain.</p>'
+            },
+            24: {
+                title: "Our Begin Now To Being What You Will Be.",
+                category: "Restaurant",
+                author: "Vigola Morgan",
+                authorImg: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50&q=80",
+                date: "July 10, 2026",
+                views: "2,000 views",
+                comments: "230",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&q=80",
+                heroImage: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400&q=80",
+                tags: ["Restaurant", "Food", "Dining", "Culinary"],
+                content: '<p class="lead">The restaurant industry is experiencing a golden age of creativity and innovation. From intimate chef\'s counters to sprawling food halls, dining experiences are becoming more diverse, exciting, and accessible than ever before.</p><p>Modern restaurants are no longer just places to eat — they\'re cultural hubs that reflect the personalities, values, and visions of the people who create them. The best restaurants offer immersive experiences that engage all the senses.</p><p>The farm-to-table movement has transformed how restaurants source and present ingredients. By building direct relationships with local farmers, ranchers, and artisans, restaurants can offer the freshest possible ingredients while supporting sustainable agriculture.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Cooking is at once child\'s play and adult joy. And cooking done with care is an act of love."</p><cite>— Craig Claiborne</cite></blockquote><p>Wine and beverage programs have evolved significantly, with sommeliers offering curated selections that complement and enhance the dining experience. Natural wines, craft cocktails, and artisanal non-alcoholic options provide something for every palate.</p><p>The rise of food delivery and ghost kitchens has created new opportunities for culinary entrepreneurs, while dine-in restaurants continue to raise the bar for service, ambiance, and culinary excellence.</p><h2>The Future of Dining</h2><p>Technology is enhancing rather than replacing the human elements of the dining experience. Online reservations, digital menus, and contactless payment streamline logistics, freeing up staff to focus on what matters most — creating memorable experiences for guests.</p>'
+            },
+            25: {
+                title: "Proin augue dolor ullamcorpert id neque non eleifend.",
+                category: "Lifestyle",
+                author: "Miles Jaxon",
+                authorImg: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&q=80",
+                date: "Dec 12, 2026",
+                views: "2,100 views",
+                comments: "130",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=400&q=80",
+                heroImage: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=1400&q=80",
+                tags: ["Lifestyle", "Nature", "Wellness", "Outdoors"],
+                content: '<p class="lead">There\'s a growing body of evidence that spending time in nature is essential for our physical and mental well-being. From reducing stress hormones to boosting immune function, the benefits of nature exposure are both profound and well-documented.</p><p>In our increasingly urbanized world, making a conscious effort to connect with nature has become more important than ever. Even brief exposures to green spaces can have measurable positive effects on mood and cognitive function.</p><p>The concept of "nature deficit disorder" highlights the consequences of our disconnection from the natural world. Children and adults alike need regular contact with nature to thrive.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Look deep into nature, and then you will understand everything better."</p><cite>— Albert Einstein</cite></blockquote><p>Outdoor activities like hiking, gardening, and cycling provide excellent exercise while allowing you to enjoy nature\'s restorative effects. These activities combine physical fitness with the mental health benefits of being in green environments.</p><p>Creating opportunities for nature exposure in daily life doesn\'t require dramatic lifestyle changes. Walking through a park, eating lunch outdoors, or tending to houseplants can all help bridge the gap between modern life and the natural world.</p><h2>Reconnecting with Nature</h2><p>Start by spending at least 20 minutes outdoors each day. Leave your phone behind or put it on silent. Observe the sky, listen to the birds, feel the breeze. These small moments of nature connection can profoundly improve your quality of life.</p>'
+            },
+            26: {
+                title: "Imperdiet ident turpis Nunc ont scelerisque ante.",
+                category: "Fitness",
+                author: "Andres Emilion",
+                authorImg: "https://i.pravatar.cc/40?img=11",
+                date: "July 04, 2026",
+                views: "1,400 views",
+                comments: "50",
+                readTime: "4 min read",
+                image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&q=80",
+                heroImage: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1400&q=80",
+                tags: ["Fitness", "Exercise", "Health", "Training"],
+                content: '<p class="lead">Fitness is not about achieving a perfect body — it\'s about building a strong, capable, and resilient one. Regular physical activity is one of the most powerful tools we have for improving our health and quality of life.</p><p>The key to a successful fitness routine is finding activities you genuinely enjoy. When exercise feels like play rather than punishment, it becomes something you look forward to rather than dread.</p><p>Strength training, cardiovascular exercise, and flexibility work each offer unique benefits. A well-rounded fitness program incorporates all three for optimal health and performance.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Take care of your body. It\'s the only place you have to live."</p><cite>— Jim Rohn</cite></blockquote><p>Progress, not perfection, should be the goal. Celebrating small improvements — lifting a little more weight, running a little faster, or simply being more consistent — builds motivation and momentum over time.</p><p>Recovery is an essential but often overlooked component of fitness. Adequate sleep, proper nutrition, and rest days allow your body to repair and grow stronger.</p><h2>Starting Your Fitness Journey</h2><p>If you\'re new to exercise, start with 20-30 minutes of moderate activity three times a week. Walking, swimming, and cycling are excellent low-impact options. As your fitness improves, gradually increase the duration and intensity of your workouts.</p>'
+            },
+            27: {
+                title: "Our Begin Now To Being What You Will Be.",
+                category: "Travel",
+                author: "Miles Jaxon",
+                authorImg: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&q=80",
+                date: "Jul 13, 2026",
+                views: "1,800 views",
+                comments: "87",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=400&q=80",
+                heroImage: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1400&q=80",
+                tags: ["Travel", "Mountain", "Adventure", "Hiking"],
+                content: '<p class="lead">Mountains have always held a special place in the human imagination. Their towering peaks, dramatic landscapes, and serene atmosphere inspire awe and offer a powerful reminder of nature\'s grandeur.</p><p>Mountain travel provides some of the most rewarding experiences available to adventurous souls. Whether you\'re trekking through alpine meadows, standing atop a summit, or simply enjoying the view from a mountain lodge, these experiences leave lasting impressions.</p><p>Mountaineering and hiking challenge both body and mind, building physical strength while cultivating mental resilience. The sense of accomplishment that comes from reaching a summit — whether it\'s your first hill or your tenth peak — is deeply satisfying.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"The mountains are calling and I must go."</p><cite>— John Muir</cite></blockquote><p>Mountain communities around the world offer rich cultural experiences. From Himalayan monasteries to Alpine villages, the people who call the mountains home have developed unique traditions, cuisines, and ways of life that reflect their dramatic surroundings.</p><p>Safety should always be a priority when traveling in mountainous terrain. Proper preparation, appropriate equipment, respect for weather conditions, and awareness of altitude effects are essential for a safe and enjoyable experience.</p><h2>Planning a Mountain Adventure</h2><p>Research your destination thoroughly, choose routes that match your fitness level, and always carry the ten essentials: navigation tools, sun protection, insulation, illumination, first aid, fire, repair kit, nutrition, hydration, and emergency shelter.</p>'
+            },
+            28: {
+                title: "Consectetur quam Nam quisent ante pharetra eleifend.",
+                category: "Lifestyle",
+                author: "Vigola Morgan",
+                authorImg: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50&q=80",
+                date: "Jul 02, 2026",
+                views: "1,600 views",
+                comments: "87",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&q=80",
+                heroImage: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1400&q=80",
+                tags: ["Lifestyle", "Creativity", "Hobbies", "Passion"],
+                content: '<p class="lead">Hobbies are the sparks that ignite our passions and bring joy to our daily lives. In a world that often prioritizes productivity over pleasure, making time for activities we love is an act of self-care and a pathway to a richer life.</p><p>Engaging in hobbies reduces stress, stimulates creativity, and provides a sense of accomplishment outside of work. Whether it\'s painting, cooking, woodworking, or playing music, hobbies nourish parts of our identity that our careers may not satisfy.</p><p>The social dimension of hobbies is equally valuable. Joining clubs, attending workshops, and connecting with fellow enthusiasts creates communities built around shared interests and mutual support.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"The true secret of happiness lies in the taking a genuine interest in all the details of daily life."</p><cite>— William Morris</cite></blockquote><p>Hobbies can also become vehicles for personal growth. Learning a new skill, mastering a technique, or completing a project builds confidence and demonstrates that we\'re capable of more than we might think.</p><p>In some cases, hobbies evolve into second careers or side businesses. The rise of the creator economy has made it possible to monetize virtually any skill or passion, from handmade crafts to educational content.</p><h2>Finding Your Perfect Hobby</h2><p>Think back to activities you enjoyed as a child or teenager. Often, our authentic interests are revealed in the things we chose to do when no one was telling us what to do. Revisiting those interests as an adult can lead to wonderful discoveries.</p>'
+            },
+            29: {
+                title: "Imperdiet ident turpis Nunc ont scelerisque ante.",
+                category: "Restaurant",
+                author: "Andres Emilion",
+                authorImg: "https://i.pravatar.cc/40?img=11",
+                date: "Jul 11, 2026",
+                views: "1,500 views",
+                comments: "87",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=400&q=80",
+                heroImage: "https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=1400&q=80",
+                tags: ["Restaurant", "Dining", "Food", "Culture"],
+                content: '<p class="lead">The restaurant industry is a dynamic ecosystem of creativity, passion, and hospitality. From humble street food vendors to world-renowned dining establishments, restaurants play a vital role in our cultural landscape.</p><p>Great restaurants do more than serve food — they create experiences. The ambiance, the service, the presentation, and of course the flavors all work together to transport diners to another place and time.</p><p>Chefs today are as much artists as they are cooks. They draw inspiration from their travels, memories, and cultural heritage to create menus that tell stories and evoke emotions.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Restaurant is a place where you can try food you never tried before, and go on a culinary journey."</p><cite>— Unknown</cite></blockquote><p>The global restaurant scene continues to evolve, with street food gaining recognition alongside fine dining. Food trucks, pop-up restaurants, and casual eateries are redefining what it means to eat out, emphasizing quality ingredients and creative flavors over formality.</p><p>Supporting local restaurants means supporting your community. Independent restaurants create jobs, contribute to neighborhood character, and often source from local producers.</p><h2>Discovering Hidden Gems</h2><p>The best restaurant experiences often come from unexpected places. Don\'t be afraid to try a new ethnic cuisine, visit a restaurant in an unfamiliar neighborhood, or order something you\'ve never had before. Culinary adventure awaits around every corner.</p>'
+            },
+            30: {
+                title: "Our Begin Now To Being What You Will Be own fully gone.",
+                category: "Video",
+                author: "Vigola Morgan",
+                authorImg: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50&q=80",
+                date: "July 30, 2026",
+                views: "5,200 views",
+                comments: "340",
+                readTime: "4 min read",
+                image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&q=80",
+                heroImage: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1400&q=80",
+                tags: ["Video", "Cinema", "Film", "Storytelling"],
+                content: '<p class="lead">Video content has become the dominant form of media consumption in the digital age. From streaming platforms to social media, video shapes how we learn, entertain ourselves, and connect with others.</p><p>The democratization of video production tools has empowered a new generation of storytellers. With nothing more than a smartphone, anyone can create and share compelling video content with a global audience.</p><p>Short-form video platforms have revolutionized content creation, giving rise to new forms of creative expression that blend entertainment, education, and social commentary in bite-sized packages.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Cinema is a mirror that can change the world."</p><cite>— Agnès Varda</cite></blockquote><p>Long-form video content continues to thrive through streaming services that produce original films, documentaries, and series of remarkable quality. The golden age of television has evolved into a golden age of streaming content.</p><p>Video is also transforming education, with online courses, tutorials, and educational channels making learning more accessible and engaging than ever before.</p><h2>The Future of Video</h2><p>Emerging technologies like virtual reality, augmented reality, and AI-generated content are poised to take video experiences to entirely new levels of immersion and interactivity. The storytellers who master these tools will shape the next chapter of visual media.</p>'
+            },
+            31: {
+                title: "Nunc scelerisque ante consequat elementum.",
+                category: "Lifestyle",
+                author: "Jace Emmett",
+                authorImg: "https://i.pravatar.cc/40?img=11",
+                date: "July 25, 2026",
+                views: "2,800 views",
+                comments: "195",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=300&q=80",
+                heroImage: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1400&q=80",
+                tags: ["Lifestyle", "Photography", "Art", "Creative"],
+                content: '<p class="lead">Photography has become the universal language of the digital age. From professional photojournalism to everyday smartphone snaps, images shape how we see and understand the world around us.</p><p>The art of photography combines technical skill with creative vision. Understanding light, composition, and timing transforms a simple snapshot into a compelling visual story.</p><p>Mobile phone cameras have made photography accessible to virtually everyone. The best camera is the one you have with you, and today\'s smartphones are remarkably capable creative tools.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Photography is the story I fail to put into words."</p><cite>— Destin Sparks</cite></blockquote><p>Photography communities, both online and in person, provide wonderful opportunities for learning, inspiration, and connection. Sharing your work and receiving feedback from fellow photographers accelerates your growth as an artist.</p><p>Environmental photography plays a crucial role in conservation efforts, documenting the beauty of the natural world and the threats it faces. A powerful photograph can inspire action and change policies.</p><h2>Improving Your Photography</h2><p>Practice daily. Learn the rule of thirds, experiment with natural light, and study the work of photographers you admire. Most importantly, develop your unique perspective — what do you see that others might miss?</p>'
+            },
+            32: {
+                title: "Sed lectus duitotan tristiquei eleifend blandit.",
+                category: "Lifestyle",
+                author: "Luka Evan",
+                authorImg: "https://i.pravatar.cc/40?img=53",
+                date: "July 22, 2026",
+                views: "1,900 views",
+                comments: "140",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=300&q=80",
+                heroImage: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1400&q=80",
+                tags: ["Lifestyle", "Music", "Arts", "Culture"],
+                content: '<p class="lead">Music is perhaps the most universal form of human expression. Across every culture and throughout all of history, music has served as a vehicle for emotion, celebration, storytelling, and connection.</p><p>The digital revolution has transformed how we create, distribute, and consume music. Streaming platforms have made millions of songs available at our fingertips, while affordable production tools have empowered bedroom producers to create studio-quality music.</p><p>Live music remains an irreplaceable experience. The energy of a concert, the intimacy of a small venue, and the communal joy of sharing music with others creates memories that no recording can replicate.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Where words fail, music speaks."</p><cite>— Hans Christian Andersen</cite></blockquote><p>Learning to play an instrument is one of the most rewarding pursuits available to anyone. It develops discipline, creativity, and cognitive abilities while providing a lifelong source of pleasure and self-expression.</p><p>Music therapy has gained recognition as an effective treatment for a range of physical and mental health conditions, from chronic pain to depression to cognitive decline.</p><h2>Deepening Your Musical Experience</h2><p>Expand your musical horizons by exploring genres and artists outside your usual preferences. Attend live shows, join a community choir or band, or simply make a habit of listening to new music each week. The more you engage with music, the more it enriches your life.</p>'
+            },
+            33: {
+                title: "Our Begin Now To Being What You Will Be.",
+                category: "Lifestyle",
+                author: "Rison donec",
+                authorImg: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&q=80",
+                date: "Jul 02, 2026",
+                views: "3,200 views",
+                comments: "520",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=120&q=80",
+                heroImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1400&q=80",
+                tags: ["Lifestyle", "Inspiration", "Growth", "Future"],
+                content: '<p class="lead">Every person carries within them the potential for extraordinary growth and transformation. The journey from who you are to who you want to become is one of life\'s most exciting adventures.</p><p>Personal development isn\'t about fixing what\'s broken — it\'s about amplifying what\'s already working and expanding your capacity for joy, contribution, and fulfillment.</p><p>The first step toward becoming who you want to be is clarity. Taking time to reflect on your values, strengths, and aspirations creates a compass that guides your decisions and actions.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Be the change that you wish to see in the world."</p><cite>— Mahatma Gandhi</cite></blockquote><p>Habits are the building blocks of identity. Each small action you repeat daily sends a message to your subconscious about who you are. By choosing your habits intentionally, you can literally become the person you aspire to be.</p><p>Resilience — the ability to bounce back from setbacks — is perhaps the most important quality for personal growth. Every challenge contains a lesson, and every failure is an opportunity to learn and improve.</p><h2>Your Transformation Starts Now</h2><p>Don\'t wait for Monday, next month, or next year. Start today with one small step. Write down your goals, establish one new positive habit, or reach out to a mentor. The person you want to become is waiting on the other side of consistent action.</p>'
+            },
+            34: {
+                title: "Our Begin Now To Being What You Will Be.",
+                category: "Lifestyle",
+                author: "Rison donec",
+                authorImg: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&q=80",
+                date: "Jul 11, 2026",
+                views: "2,800 views",
+                comments: "454",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=120&q=80",
+                heroImage: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1400&q=80",
+                tags: ["Lifestyle", "Motivation", "Success", "Mindset"],
+                content: '<p class="lead">The gap between where you are and where you want to be is bridged by one thing: action. Not perfect action, not massive action — just consistent, deliberate steps in the direction of your dreams.</p><p>Success isn\'t an overnight phenomenon. It\'s the result of countless small decisions, late nights, early mornings, and the unwavering belief that your efforts will eventually bear fruit.</p><p>Surrounding yourself with the right people is crucial. Your social circle influences your mindset, habits, and ambition more than you might realize. Choose companions who inspire you to grow.</p><blockquote class="post-blockquote"><div class="blockquote-icon"><i class="bi bi-quote"></i></div><p>"Success is not final, failure is not fatal: it is the courage to continue that counts."</p><cite>— Winston Churchill</cite></blockquote><p>Failure is not the opposite of success — it\'s a stepping stone toward it. Every successful person has a trail of failures behind them, each one providing valuable lessons that refined their approach.</p><p>Time is your most valuable resource. How you spend your hours determines the quality of your life. Invest your time wisely in activities, relationships, and pursuits that align with your deepest values.</p><h2>Actionable Steps Forward</h2><p>Identify the one thing that, if accomplished, would have the greatest positive impact on your life. Commit to working on it for at least 30 minutes every day. Track your progress, celebrate small wins, and adjust your approach as needed. Within a year, you\'ll be amazed at how far you\'ve come.</p>'
+            }
+        };
+
+        var params = new URLSearchParams(window.location.search);
+        var id = parseInt(params.get('id')) || 1;
+        var article = articles[id] || articles[1];
+
+        document.title = article.title + ' - HEXA NEWS';
+
+        document.getElementById('heroBanner').style.backgroundImage = "url('" + article.heroImage + "')";
+        document.getElementById('heroBadge').textContent = article.category;
+        document.getElementById('heroTitle').textContent = article.title;
+        document.getElementById('heroAuthorImg').src = article.authorImg;
+        document.getElementById('heroAuthor').textContent = article.author;
+        document.getElementById('heroDate').textContent = article.date;
+        document.getElementById('heroViews').textContent = article.views;
+        document.getElementById('heroComments').textContent = article.comments + ' Comments';
+
+        document.getElementById('breadcrumbCategory').textContent = article.category;
+        document.getElementById('postCategory').textContent = article.category;
+        document.getElementById('postTitle').textContent = article.title;
+        document.getElementById('postAuthorImg').src = article.authorImg;
+        document.getElementById('postAuthor').textContent = article.author;
+        document.getElementById('postDate').textContent = article.date;
+        document.getElementById('postReadTime').textContent = article.readTime;
+        document.getElementById('postImage').src = article.image;
+        document.getElementById('postImage').alt = article.title;
+        document.getElementById('postContent').innerHTML = article.content;
+
+        var tagsHtml = '';
+        article.tags.forEach(function(tag){
+            tagsHtml += '<a href="#">' + tag + '</a>';
+        });
+        document.getElementById('postTags').innerHTML = tagsHtml;
+
+        document.getElementById('commentsHeading').textContent = article.comments + ' Comments';
+
+        var allIds = Object.keys(articles).map(Number);
+        var currentIdx = allIds.indexOf(id);
+        var prevId = currentIdx > 0 ? allIds[currentIdx - 1] : allIds[allIds.length - 1];
+        var nextId = currentIdx < allIds.length - 1 ? allIds[currentIdx + 1] : allIds[0];
+        var prevArticle = articles[prevId];
+        var nextArticle = articles[nextId];
+
+        document.getElementById('postNav').innerHTML =
+            '<a href="post-detail.html?id=' + prevId + '" class="post-nav-item prev-post">' +
+                '<span class="nav-label"><i class="bi bi-arrow-left"></i> Previous Post</span>' +
+                '<div class="nav-content">' +
+                    '<img src="' + prevArticle.image + '" alt="prev">' +
+                    '<span class="nav-title">' + prevArticle.title + '</span>' +
+                '</div>' +
+            '</a>' +
+            '<a href="post-detail.html?id=' + nextId + '" class="post-nav-item next-post">' +
+                '<span class="nav-label">Next Post <i class="bi bi-arrow-right"></i></span>' +
+                '<div class="nav-content">' +
+                    '<span class="nav-title">' + nextArticle.title + '</span>' +
+                    '<img src="' + nextArticle.image + '" alt="next">' +
+                '</div>' +
+            '</a>';
+
+        var commentsData = [
+            { name: "Lisa Wang", img: "https://i.pravatar.cc/60?img=12", date: article.date, text: "This is a fantastic article! Really well-written and informative. Thanks for sharing these insights." },
+            { name: "Mark Johnson", img: "https://i.pravatar.cc/60?img=18", date: article.date, text: "Great read! I appreciate the depth of research and the practical tips included. Looking forward to more content like this." }
+        ];
+
+        var commentsHtml = '';
+        commentsData.forEach(function(c){
+            commentsHtml += '<div class="comment-item"><div class="comment-author-img"><img src="' + c.img + '" alt="commenter"></div><div class="comment-body"><div class="comment-header"><h5 class="comment-author">' + c.name + '</h5><span class="comment-date">' + c.date + '</span></div><p class="comment-text">' + c.text + '</p><button class="reply-btn"><i class="bi bi-reply"></i> Reply</button></div></div>';
+        });
+        document.getElementById('commentsList').innerHTML = commentsHtml;
+    })();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

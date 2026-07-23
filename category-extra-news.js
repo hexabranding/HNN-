@@ -28,4 +28,25 @@ document.addEventListener('DOMContentLoaded', function () {
             '<h2><a href="post-detail.html">' + story.title + '</a></h2><p>' + story.text + '</p><div class="blog-footer"><a href="post-detail.html" class="arrow-btn">Read More <span class="arrow"><i class="bi bi-arrow-right"></i></span></a></div></div>';
         contentColumn.appendChild(card);
     });
+
+    const sidebar = document.querySelector('.blog-section aside');
+    if (sidebar) {
+        const related = stories[page];
+        const mostRead = document.createElement('div');
+        mostRead.className = 'sidebar-widget category-most-read';
+        mostRead.innerHTML = '<h4 class="widget-title">Most Read</h4>' + related.map(function (story, index) {
+            return '<a class="category-read-item" href="post-detail.html"><span>0' + (index + 1) + '</span><div><strong>' + story.title + '</strong><small>' + story.time + '</small></div></a>';
+        }).join('');
+        sidebar.querySelector('.sidebar-widget:last-child').after(mostRead);
+
+        const newsletter = document.createElement('div');
+        newsletter.className = 'sidebar-widget category-newsletter';
+        newsletter.innerHTML = '<i class="bi bi-envelope-paper"></i><h4>Get the weekly briefing</h4><p>Top stories and useful updates, delivered every week.</p><a href="#" class="arrow-btn">Subscribe <span class="arrow"><i class="bi bi-arrow-right"></i></span></a>';
+        sidebar.appendChild(newsletter);
+    }
+
+    const footer = document.querySelector('.footer-area');
+    if (footer) {
+        footer.innerHTML = '<div class="container"><div class="category-footer-grid"><div class="category-footer-brand"><a href="index.html"><img src="images/logo hexa.png" alt="HEXA NEWS"></a><p>Clear, trusted stories from the world of sports, health, technology and beyond.</p></div><div><h4>Explore</h4><ul><li><a href="sports.html">Sports</a></li><li><a href="health.html">Health</a></li><li><a href="technology.html">Technology</a></li><li><a href="business.html">Business</a></li></ul></div><div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="index.html">Latest News</a></li></ul></div><div><h4>Follow HEXA</h4><div class="category-footer-social"><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></div></div></div><div class="footer-bottom"><p>© 2026 HEXA NEWS. All rights reserved.</p><p><a href="#">Privacy Policy</a> <span>•</span> <a href="#">Terms of Use</a></p></div></div>';
+    }
 });
